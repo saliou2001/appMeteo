@@ -1,15 +1,16 @@
 <template>
   <div class="home" >
-    <div class="overlay" v-if="openForm" >
-      <div class="modalForm" >
-        <AjoutVille @close-modal="openForm=false"/>
-        <button class="btn waves-effect waves-light btn-block red close" @click="openForm=false">Fermer</button>
-      </div>
-
-    </div>
 
 
     <div class="container">
+      <div class="overlay" v-if="openForm" >
+        <div class=" modalForm" >
+          <AjoutVille @close-modal="openForm=false"/>
+          <button class="btn waves-effect waves-light btn-block red close" @click="openForm=false">Fermer</button>
+        </div>
+
+      </div>
+
       <div class="row">
         <div class="col s12">
           <h1 class="title" style="color: white;font-weight: bold">Méteo</h1>
@@ -75,9 +76,12 @@ const modifVille = (ville) => {
 .modalForm{
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 38%;
+
+  margin-left: 50px;
+  margin-right: 50px;
   transform: translate(-50%,-50%);
-  width: 500px;
+  width: 400px;
   height: 300px;
   background-color: white;
   border-radius: 10px;

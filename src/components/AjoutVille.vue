@@ -21,7 +21,6 @@ const emit=defineEmits(["closeModal"])
 
 function closeAndSave() {
   saveCity();
-
   emit("closeModal")
 }
 function saveCity() {
